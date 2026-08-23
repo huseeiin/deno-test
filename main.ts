@@ -152,7 +152,7 @@ export async function getVideo(viewkey: string) {
 export default new H3()
   .get("/videos", (e) => getVideos())
 
-  .get("/video", (e) => getVideo(e.url.searchParams.get("id")))
+  .get("/videoInfo", (e) => getVideo(e.url.searchParams.get("id")))
   .get("/video", async (e) => {
     const url = e.url;
     const viewkey = url.searchParams.get("id");
