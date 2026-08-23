@@ -46,7 +46,11 @@ export async function getVideos() {
         if (!el.lastInTextNode) currentVideo.duration = el.text;
       },
     })
-    .transform(await fetch("https://www.pornhub.com/model/dutchxthin/videos"))
+    .transform(
+      await fetch("https://www.pornhub.com/model/dutchxthin/videos", {
+        headers: { "user-agent": "Mozilla/5.0" },
+      }),
+    )
     .text();
 
   return videos;
