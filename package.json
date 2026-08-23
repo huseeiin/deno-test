@@ -1,0 +1,5 @@
+{
+	"dependencies": {
+		"@types/deno": "^2.7.0"
+	}
+}
