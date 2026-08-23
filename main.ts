@@ -68,6 +68,6 @@ Deno.serve(async(req: Request) => {
 
   const newHeaders2 = new Headers(video.headers);
   newHeaders2.delete("cache-control");
-
+newHeaders2.set('content-disposition','file')
   return new Response(video.body, { headers: newHeaders2 });
 });
