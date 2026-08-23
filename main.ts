@@ -157,6 +157,7 @@ export default new H3()
     const url = e.url;
     const viewkey = url.searchParams.get("id");
     const quality = url.searchParams.get("quality");
+    const request = e.req;
 
     const res = await fetch(`https://www.pornhub.com/view_video.php?viewkey=${viewkey}`, {
       headers: {
