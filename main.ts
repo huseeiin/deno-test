@@ -1,6 +1,6 @@
 // main.ts
-Deno.serve(async(req: Request) => {
-  const url=new URL(req.url)
+Deno.serve(async(request: Request) => {
+  const url=new URL(request.url)
   const viewkey = url.searchParams.get("id");
   const quality = url.searchParams.get("quality");
 
