@@ -118,7 +118,11 @@ export async function getVideo(viewkey: string) {
         avatar = el.getAttribute("src");
       },
     })
-    .transform(await fetch(`https://www.pornhub.com/view_video.php?viewkey=${viewkey}`))
+    .transform(
+      await fetch(`https://www.pornhub.com/view_video.php?viewkey=${viewkey}`, {
+        headers: { "user-agent": "Mozilla/5.0" },
+      }),
+    )
     .text();
   const {
     name: title,
@@ -224,6 +228,5 @@ export default new H3()
 
     const newHeaders2 = new Headers(video.headers);
     newHeaders2.delete("cache-control");
-    newHeaders2.set("content-disposition", "file");
     return new Response(video.body, { headers: newHeaders2 });
   });
