@@ -1,5 +1,8 @@
 {
 	"dependencies": {
-		"@types/deno": "^2.7.0"
+		"@types/deno": "^2.7.0",
+		"h3": "2.0.1-rc.29",
+		"html-entities": "^2.6.0",
+		"htmlrewriter": "^0.0.13"
 	}
 }
